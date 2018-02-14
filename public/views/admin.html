@@ -1,0 +1,260 @@
+<div ng-controller="adminCtrl" style="margin-top: 50px;">
+    <label for="category">Category</label>
+    <select ng-model="category" required>
+        <option value="">
+            <option value="mobile">Mobile
+                <option value="laptop">Laptop
+                    <option value="speaker">Speaker
+                        <option value="television">Television</option>
+    </select>
+    <!-- novalidate prevents HTML5 validation since we will be validating ourselves -->
+    <!-- NAME -->
+
+<!-- ====Mobile Form===== -->
+
+    <div ng-show="category=='mobile'">
+        <form name="productForm" ng-submit="submitForm(productForm.$valid)"  novalidate>
+            <div class="text-center"><h2> Mobile Form </h2></div>
+            <div class="form-group col-md-6 col-sm-6">
+                <label for="mName"> Name:</label>
+                <input type="text" name="mName" class="form-control" ng-model="mName" required>
+            </div>
+
+             <div class="form-group col-md-6 col-sm-6">
+                <label for="mPrice">Price:</label>
+                <input type="text" name="mPrice" class="form-control" ng-model="mPrice" required>
+            </div>
+
+             <div class="form-group col-md-6 col-sm-6">
+                <label for="mScreen">Screen size:</label>
+                <input type="text" name="mScreen" class="form-control" ng-model="mScreen" required>
+            </div>
+
+             <div class="form-group col-md-6 col-sm-6">
+                <label for="mPro">Processor</label>
+                <input type="text" name="mPro" class="form-control" ng-model="mPro" required>
+            </div>
+
+             <div class="form-group col-md-6 col-sm-6">
+                <label for="mOs">Operating System</label>
+                <input type="text" name="mOs" class="form-control" ng-model="mOs" required>
+            </div>
+
+            <div class="form-group col-md-6 col-sm-6">
+                <label for="mBat">Battery</label>
+                <input type="text" name="mBat" class="form-control" ng-model="mBat" required>
+            </div>
+
+            <div class="form-group col-md-6 col-sm-6">
+                <label for="mCam">Camera</label>
+                <input type="text" name="mCam" class="form-control" ng-model="mCam" required>
+            </div>
+
+            <div class="form-group col-md-6 col-sm-6">
+                <label for="mMem">Memory</label>
+                <input type="text" name="mMem" class="form-control" ng-model="mMem" required>
+            </div>
+
+            <div class="form-group col-md-6 col-sm-6">
+                <label for="mWar">Warranty</label>
+                <input type="text" name="mWar" class="form-control" ng-model="mWar" required>
+            </div>
+
+            <div class="form-group col-md-6 col-sm-6">
+                <label for="mCol">Color</label>
+                <input type="text" name="mCol" class="form-control" ng-model="mCol" required>
+            </div>
+
+            <!-- Description -->
+            <div class="form-group col-md-12">
+                <label for="desc">Description</label>
+                <textarea rows="3" name="desc" class="form-control" ng-model="desc" required></textarea> 
+            </div>
+            <!-- Image -->
+            <div class="form-group col-md-12">
+                <label for="file">Image</label>
+                <input type="file" name="file" class="file" required>
+            </div>
+            <button class="btn btn-md btn-primary" class="upload-button" type="submit" disabled>Upload image</button>
+            <!-- SUBMIT BUTTON -->
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+<!-- ====Laptop Form===== -->
+    <div ng-show="category=='laptop'">
+        <form name="productForm" ng-submit="submitForm(productForm.$valid)" novalidate>
+            
+            <div class="text-center"><h2> Laptop Form </h2></div>
+            <div class="form-group col-md-6 col-sm-6">
+                <label for="lName"> Name:</label>
+                <input type="text" name="lName" class="form-control" ng-model="lName" required>
+            </div>
+
+            <div class="form-group col-md-6 col-sm-6">
+                <label for="lPrice"> Price:</label>
+                <input type="text" name="lPrice" class="form-control" ng-model="lPrice" required>
+            </div>
+            <!-- Description -->
+            <div class="form-group col-md-6 col-sm-6">
+                <label for="lScreen"> Screen:</label>
+                <input type="text" name="lScreen" class="form-control" ng-model="lScreen" required>
+            </div>
+
+            <div class="form-group col-md-6 col-sm-6">
+                <label for="lPro"> Processor:</label>
+                <input type="text" name="lPro" class="form-control" ng-model="lPro" required>
+            </div>
+            <div class="form-group col-md-6 col-sm-6">
+                <label for="lOs"> Operating System:</label>
+                <input type="text" name="lOs" class="form-control" ng-model="lOs" required>
+            </div>
+
+            <div class="form-group col-md-6 col-sm-6">
+                <label for="lBat"> Battery:</label>
+                <input type="text" name="lBat" class="form-control" ng-model="lBat" required>
+            </div>
+
+            <div class="form-group col-md-6 col-sm-6">
+                <label for="lMem"> Memory:</label>
+                <input type="text" name="lMem" class="form-control" ng-model="lMem" required>
+            </div>
+
+            <div class="form-group col-md-6 col-sm-6">
+                <label for="lWar"> Warranty:</label>
+                <input type="text" name="lWar" class="form-control" ng-model="lWar" required>
+            </div>
+
+            <div class="form-group col-md-6 col-sm-6">
+                <label for="lCol"> Color:</label>
+                <input type="text" name="lCol"  rows="3" class="form-control" ng-model="lCol" required>
+            </div>
+
+            <div class="form-group col-md-12">
+                <label for="lDesc">Description:</label>
+                <textarea name="lDesc" class="form-control" ng-model="lDesc" required></textarea> 
+            </div>
+            <!-- EMAIL -->
+            <div class="form-group col-md-12">
+                <label for="file">Image</label>
+                <input type="file" name="file" class="file" required>
+            </div>
+            <div class="col-md-12"><button class="btn btn-md btn-primary" class="upload-button" type="submit" disabled>Upload image</button>
+            </div>
+            <!-- SUBMIT BUTTON -->
+            <div class="col-md-12"><button type="submit" class="btn btn-primary">Submit</button></div>
+        </form>
+    </div>
+
+    <!-- ====Speaker Form===== -->
+    <div ng-show="category=='speaker'">
+        <form name="productForm" ng-submit="submitForm(productForm.$valid)" novalidate>
+            <div class="text-center"><h2> Speaker Form </h2></div>
+            <div class="form-group col-md-6 col-sm-6">
+                <label for="sName"> Name:</label>
+                <input type="text" name="sName" class="form-control" ng-model="sName" required>
+            </div>
+
+            <div class="form-group col-md-6 col-sm-6">
+                <label for="sPrice"> Price:</label>
+                <input type="text" name="sPrice" class="form-control" ng-model="sPrice" required>
+            </div>
+
+            <div class="form-group col-md-6 col-sm-6">
+                <label for="sPow"> Power:</label>
+                <input type="text" name="sPow" class="form-control" ng-model="sPow" required>
+            </div>
+
+            <div class="form-group col-md-6 col-sm-6">
+                <label for="sNum"> Number of speakers:</label>
+                <input type="text" name="sNum" class="form-control" ng-model="sNum" required>
+            </div>
+
+            <div class="form-group col-md-6 col-sm-6">
+                <label for="sOut"> Output Power:</label>
+                <input type="text" name="sOut" class="form-control" ng-model="sOut" required>
+            </div>
+
+            <div class="form-group col-md-6 col-sm-6">
+                <label for="sWar"> Warranty:</label>
+                <input type="text" name="sWar" class="form-control" ng-model="sWar" required>
+            </div>
+
+             <div class="form-group col-md-6 col-sm-6">
+                <label for="sMem"> Memory:</label>
+                <input type="text" name="sMem" class="form-control" ng-model="sMem" required>
+            </div>
+
+
+
+
+            <div class="form-group col-md-12">
+                <label for="sDesc">Description:</label>
+                <textarea name="sDesc" class="form-control" ng-model="sDesc" required></textarea> 
+            </div>
+            <!-- EMAIL -->
+            <div class="form-group col-md-12">
+                <label for="file">Image</label>
+                <input type="file" name="file" class="file" required>
+            </div>
+            <div class="col-md-12"><button class="btn btn-md btn-primary" class="upload-button" type="submit" disabled>Upload image</button>
+            </div>
+            <!-- SUBMIT BUTTON -->
+            <div class="col-md-12"><button type="submit" class="btn btn-primary">Submit</button></div>
+        </form>
+    </div>
+
+    <!-- ====Television Form===== -->
+    <div ng-show="category=='television'">
+        <form name="productForm" ng-submit="submitForm(productForm.$valid)" novalidate>
+            <div class="text-center"><h2> Television Form </h2></div>
+            <div class="form-group col-md-6 col-sm-6">
+                <label for="tName"> Name:</label>
+                <input type="text" name="tName" class="form-control" ng-model="tName" required>
+            </div>
+
+            <div class="form-group col-md-6 col-sm-6">
+                <label for="tPrice"> Price:</label>
+                <input type="text" name="tPrice" class="form-control" ng-model="tPrice" required>
+            </div>
+
+            <div class="form-group col-md-6 col-sm-6">
+                <label for="tSize"> Size:</label>
+                <input type="text" name="tSize" class="form-control" ng-model="tSize" required>
+            </div>
+
+
+            <div class="form-group col-md-6 col-sm-6">
+                <label for="tRes"> Resolution:</label>
+                <input type="text" name="tRes" class="form-control" ng-model="tRes" required>
+            </div>
+
+            <div class="form-group col-md-6 col-sm-6">
+                <label for="tHdmi">HDMI Port:</label>
+                <input type="text" name="tHdmi" class="form-control" ng-model="tHdmi" required>
+            </div>
+
+            <div class="form-group col-md-6 col-sm-6">
+                <label for="tWar"> Warranty:</label>
+                <input type="text" name="tWar" class="form-control" ng-model="tWar" required>
+            </div>
+             
+            <!-- Description -->
+            <div class="form-group col-md-12">
+                <label for="tDesc">Description</label>
+                <textarea rows="3" name="tDesc" class="form-control" ng-model="tDesc" required> </textarea>
+            </div>
+            <!-- EMAIL -->
+            <div class="form-group">
+                <label for="file">Image</label>
+                <input type="file" name="file" class="file" required>
+            </div>
+            <button class="btn btn-md btn-primary" class="upload-button" type="submit" disabled>Upload image</button>
+            <!-- SUBMIT BUTTON -->
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+
+
+</div>
